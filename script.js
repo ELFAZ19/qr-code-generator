@@ -24,7 +24,7 @@ function generateQRCode() {
     }
 
     const qrContainer = $('#qrContainer');
-    qrContainer.empty(); // Clear previous QR code
+    qrContainer.empty();
 
     qrCode = new QRCode(qrContainer[0], {
         text: qrText,
@@ -35,14 +35,14 @@ function generateQRCode() {
         correctLevel: QRCode.CorrectLevel.H
     });
 
-    // Apply styles to the generated QR code image
+
     setTimeout(() => {
         const qrImage = qrContainer.find('img');
         if (qrImage.length) {
             qrImage.css({
                 'padding': '15px',
                 'border-radius': '15px',
-                'background-color': 'white' // Optional: Add a background color to the QR code image
+                'background-color': 'white'
             });
         }
     }, 100);
@@ -56,12 +56,14 @@ function downloadQR() {
     if (!qrImage.length) return;
 
     const link = $('<a>')
+
         .attr('href', qrImage.attr('src'))
         .attr('download', 'qrcode.png')
         .appendTo('body');
     link[0].click();
     link.remove();
 }
+
 
 function handleButtonClick() {
     if (isGenerated) {

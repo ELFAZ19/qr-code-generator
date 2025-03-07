@@ -20,9 +20,7 @@ body {
 .switch {
     display: inline-block;
     width: 40px;
-    /* Adjusted width */
     height: 20px;
-    /* Adjusted height */
     position: relative;
 }
 
@@ -47,13 +45,13 @@ body {
     position: absolute;
     content: "";
     height: 14px;
-    /* Adjusted height */
+
     width: 14px;
-    /* Adjusted width */
+
     left: 3px;
-    /* Adjusted position */
+
     bottom: 3px;
-    /* Adjusted position */
+
     background-color: white;
     transition: .4s;
 }
@@ -64,12 +62,12 @@ input:checked+.slider {
 
 input:checked+.slider:before {
     transform: translateX(20px);
-    /* Adjusted translation */
+
 }
 
 .slider.round {
     border-radius: 20px;
-    /* Adjusted border-radius */
+
 }
 
 .slider.round:before {
