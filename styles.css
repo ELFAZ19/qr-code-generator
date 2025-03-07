@@ -113,6 +113,7 @@ button:hover {
 #qrContainer {
     margin: 20px;
     display: flex;
+    border-radius: 5px;
     justify-content: center;
     margin-top: 20px;
 }
